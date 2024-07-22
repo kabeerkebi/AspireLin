@@ -20,6 +20,7 @@ app.use(
     credentials: true,
   })
 );
+
 app.use(cookieparser());
 // for store the resume pdf
 app.use(
