@@ -1,0 +1,139 @@
+.jobs-sidebar {
+}
+
+.inside-job-title {
+  display: flex;
+  gap: 4%;
+}
+/* . {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  } */
+
+/* Responsive styles */
+/* @media screen and (max-width: 768px) {
+    .jobs-sidebar {
+      max-width: 90%;
+    }
+  } 
+   */
+
+/* report slider css  */
+.report-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.report-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.report-icon {
+  font-size: 30px;
+  color: #007bff; /* Blue color */
+}
+
+.report-card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.report-card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.report-view-more {
+  font-size: 14px;
+  color: #007bff; /* Blue color */
+  cursor: pointer;
+}
+
+.arrow-icon {
+  margin-left: 5px;
+}
+
+.ToConformDelete {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #3333;
+  display: flex;
+}
+/* the delete popup */
+.confirm-delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.confirm-delete-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  margin-top: -100px;
+}
+
+.confirm-delete-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.confirm-delete-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-delete-button,
+.cancel-delete-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.confirm-delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.cancel-delete-button {
+  background-color: #3498db;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .confirm-delete-content {
+    padding: 10px;
+  }
+
+  .confirm-delete-buttons {
+    flex-direction: column;
+  }
+
+  .confirm-delete-button,
+  .cancel-delete-button {
+    margin: 10px 0;
+  }
+}
+
+/* end   popup */

@@ -1,0 +1,104 @@
+/* Container for the apply job section */
+.apply-job-container {
+  background-color: #fffbfb;
+}
+
+/* Card styles */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom button styles */
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* Company header styles */
+.company-header {
+  margin-left: 15%;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.company-logo {
+  margin-right: 20px;
+  margin-right: 9%;
+}
+
+.company-details h3 {
+  margin: 0;
+}
+
+.company-details p {
+  margin: 0;
+  color: #888888;
+}
+
+.job-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.job-detail-label {
+  font-weight: bold;
+  color: #555;
+  margin-right: 5px; /* Small gap between label and value */
+}
+
+.job-detail-value {
+  color: #333;
+  margin-left: 5px; /* Small gap between label and value */
+}
+
+/* Custom button styles */
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px; /* Adjust the font size */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase; /* Make text uppercase */
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slightly raise the button on hover */
+}
+
+.custom-button:active {
+  background-color: #004494;
+  transform: translateY(0); /* Reset the transformation on click */
+}
+
+.custom-button-icon {
+  margin-right: 8px; /* Space between icon and text */
+}

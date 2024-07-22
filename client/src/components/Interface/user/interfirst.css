@@ -1,0 +1,107 @@
+.main {
+  background: #d6e5f7;
+}
+.find-your {
+  font-weight: 800;
+  /* color: rgb(164 0 255); */
+  color: #001a33;
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  font-size: 60px;
+  font-kerning: none;
+  text-align: center;
+  font-family: system-ui;
+}
+
+.login-button {
+  background-color: #001a33; /* Deep Navy Blue or Slightly Lighter Dark Blue */
+  color: #ffffff; /* White text for contrast */
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.login-button:hover {
+  background-color: #ffffff; /* Darker color on hover */
+  color: #001a33; /* White text on hover */
+}
+
+/* Register Button */
+.register-button {
+  background-color: #ffffff; /* White background for contrast */
+  color: #001a33; /* Deep Navy Blue or Slightly Lighter Dark Blue text */
+  padding: 10px 20px;
+  margin: 10px;
+  border: 0px solid #001a33; /* Border to separate from the background */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.register-button:hover {
+  background-color: #001a33; /* Darker color on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.addAccountsForm {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #3333;
+  margin-top: -141px;
+}
+/* Add this style to your existing CSS code */
+.login-form {
+  background-color: #ffffff; /* White background for the login form */
+  padding: 20px; /* Add padding or adjust as needed */
+  border-radius: 10px; /* Add rounded corners for a softer look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.login-form h2 {
+  color: #001a33; /* Dark blue title color */
+}
+
+.close-icon {
+  font-size: 24px;
+  color: #001a33; /* Dark blue close icon color */
+  cursor: pointer;
+}
+
+/* Optional: Style the login button */
+.login-form button {
+  background-color: #001a33; /* Dark blue button background */
+  color: #ffffff; /* White button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #003366; /* Slightly darker blue on hover */
+}
+.close-icon:hover {
+  color: red;
+  cursor: pointer;
+}
+.login-form p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555; /* Adjust the color to your preference */
+}
+
+.login-form p a {
+  color: #007bff; /* Adjust the color to your preference */
+  text-decoration: none;
+}
+
+.login-form p a:hover {
+  text-decoration: underline;
+}
+/* interfirst.css */

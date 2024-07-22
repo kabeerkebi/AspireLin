@@ -1,0 +1,229 @@
+/* Global Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f2ef;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Font color */
+}
+
+.bg-white {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-details {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  color: #555; /* Font color */
+}
+
+.rounded-circles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #343a40; /* Make first circle dark */
+  font-weight: bold;
+}
+
+.checkmark {
+  background-color: green;
+  color: #ffffff;
+}
+
+.number {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f8f9fa; /* Make other circles grey */
+  color: #555; /* Font color */
+}
+
+.jobpost-hr {
+  margin-top: -10px;
+  margin-left: 18px;
+}
+
+.containers {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* buttons  */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-group .btn {
+  margin: 5px;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  border-radius: 16px;
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  background-color: #3b8ade; /* Button color on hover */
+  border-color: #5b87b7; /* Button border color on hover */
+  color: #ffffff; /* Button text color on hover */
+}
+
+.wonderful-button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.wonderful-button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+.wonderful-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px 3px rgba(50, 50, 93, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+  transform: translateY(1px);
+}
+
+/* Back button styles */
+.back-button {
+  background-color: #e74c3c; /* Red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.back-button:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+.back-button:active {
+  background-color: #99221a;
+  box-shadow: 0 2px 3px rgba(50, 50, 93, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+  transform: translateY(1px);
+}
+
+/* Job Details Section */
+.bg-white {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+/* Location Section */
+.my-3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Compensation Section */
+.container p {
+  margin-bottom: 20px;
+}
+
+/* to edit quill */
+/* Customize the React Quill editor container */
+.react-quill {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Customize the toolbar */
+.ql-toolbar {
+  border-bottom: 1px solid #ccc;
+  background: rgb(244, 245, 247);
+}
+
+/* Customize toolbar buttons */
+.ql-toolbar .ql-picker {
+  color: #333;
+}
+
+/* Customize the editor content */
+.ql-editor {
+  min-height: 200px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* job portal 4  */
+.job-portal4-div {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px; /* Add some space between items */
+}
+
+.left-div-portal4 {
+  width: 200px;
+  font-weight: bold; /* Make labels bold */
+  color: #555; /* Font color */
+}
+
+.dropdowicon {
+  font-size: 27px;
+  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+}
+
+/* Section Headers */
+h5 {
+  color: #000000;
+  font-size: 1.5rem; /* Increase font size */
+  margin-bottom: 10px; /* Add space below headers */
+  font-weight: bold; /* Make headers bold */
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Job Portal Labels and Values */
+.job-portal4-div span {
+  color: #333;
+  font-size: 1rem;
+}
+
+.job-portal4-div p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}

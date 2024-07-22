@@ -1,0 +1,45 @@
+.inter2 {
+  background-image: linear-gradient(#d6e5f7, #d6e5f7);
+  width: 100%;
+  min-height: 100vh; /* Set a minimum height to cover the viewport */
+}
+
+.paragraph {
+  font-family: sans-serif;
+  font-weight: bold; /* Updated to set font weight to bold */
+}
+
+.Popular-Categories {
+  text-align: center;
+  font-weight: 500;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 17px;
+}
+.card-title {
+  font-family: Georgia, serif;
+}
+
+.card {
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  background-color: #f6f3f3; /* Change to the desired background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Change to the desired shadow properties */
+}
+
+/* Add any additional styles for your elements */
+.atag {
+  text-decoration: none; /* Remove underline for the link */
+  color: inherit; /* Inherit text color from the parent */
+}
+
+
+

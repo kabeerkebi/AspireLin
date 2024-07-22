@@ -1,0 +1,65 @@
+ 
+.employer-body::before {
+    background-color: #ffffff;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../assets//employer/image_processing20210802-2754-uc47v2.gif");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+    opacity: 0.5;
+    z-index: -1;
+  }
+  
+  .input-height {
+    height: 3.5rem;
+    width: 400px;
+    max-width: 500px;
+  }
+  
+  .form-label {
+    font-weight: 430;
+  }
+  
+  .form-button {
+    width: 100%;
+  }
+  
+  /* employerlogin&register.css */
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .employer-register-and-login-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: white; /* Set button background color to white */
+    color: #333; /* Set button text color */
+    border: 2px solid #333; /* Add border for button visibility */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add smooth transition */
+  }
+  
+  .button-loginpage:hover {
+    background-color: #001a33;
+    color: #ffffff;
+  }
+  
+  .button-loginpage-after {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #001a33;
+    color: #ffffff;
+    border: 2px solid #333; /* Add border for button visibility */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add smooth transition */
+  }
+  

@@ -1,0 +1,41 @@
+.btnswitch1 {
+  background-color: #ffffff;
+  border: none;
+  color: #001a33;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: -35px;
+}
+.btnswitch2 {
+  background-color: #001a33;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: -35px;
+}
+.btnswitch1:hover {
+  background-color: #001a33;
+  color: #ffffff;
+}
+.interface-logo {
+  width: 200px; /* Increase the width */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: -34px;
+}
+
+.interface-logo-div {
+  height: 100%; /* Ensure the div takes the full height of its container */
+}
