@@ -40,7 +40,7 @@ const Similar = ({ ResetEffect = { Thecardclicked } }) => {
               >
                 <div className="similar-card-logo-container">
                   <img
-                    src={SERVER_DOMAIN + job.datas.Theimages}
+                    src={job.datas.Theimages}
                     alt={`${job.datas.Theimages} logo`}
                     className="similar-card-logo"
                   />

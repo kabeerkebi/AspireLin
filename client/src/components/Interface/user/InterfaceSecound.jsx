@@ -111,7 +111,7 @@ const InterfaceSecound = () => {
         <div className="Popular-Categories">
           <h1 className="paragraph text-3xl">Trending Jobs</h1>
         </div>
-        <div className=" mt-5  ms-xl-2 container">
+        <div className=" mt-5 pb-12  ms-xl-2 container">
           <div
             style={{
               display: "flex",

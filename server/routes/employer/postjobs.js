@@ -2,8 +2,20 @@ import express from "express";
 import { Employerlogin } from ".././../models/employer.model.js";
 import mongoose from "mongoose";
 import { upload } from "../../middlewares/multer.js";
+import cloudinary from "cloudinary";
+import fs from "fs"; // Import the fs module
+import dotenv from "dotenv";
+dotenv.config();
 
 const router = express.Router();
+
+// Cloudinary Configuration
+cloudinary.v2.config({
+  cloud_name: process.env.CLOUD_NAME, // Your Cloudinary Cloud Name
+  api_key: process.env.CLOUD_KEY, // Your Cloudinary API Key
+  api_secret: process.env.CLOUD_SECRET, // Your Cloudinary API Secret
+});
+
 // to get post job data to candidate page
 router.get("/getdata", async (req, res) => {
   const result = await Employerlogin.find({}).select({
@@ -50,41 +62,73 @@ router.put("/:id", async (req, res) => {
 // toupdateProfilePhoto();
 // to add image
 
-
-
-
-
-
-
-
-
-
+// PUT Route for Profile Picture Upload and Cloudinary Uploading
 router.put(
   "/profilepicturedata/:id",
-  upload.single("profilephoto"),
+  upload.single("profilephoto"), // Multer middleware for file upload
   async (req, res) => {
     try {
-      const { filename } = req.file;
-      const UpdateEmployerImage = await Employerlogin.findByIdAndUpdate(
-        {
-          _id: new mongoose.Types.ObjectId(req.params.id),
-        },
-        {
-          profilepictures: filename,
-        },
-        { new: true }
-      );
-      if (!UpdateEmployerImage) {
-        return res
-          .status(404)
-          .json({ success: false, message: "Employer not found" });
+      const filePath = req.file.path; // Path to the locally saved file
+      const fileName = req.file.filename; // File name of the uploaded file
+
+      if (!filePath) {
+        return res.status(400).json({
+          success: false,
+          message: "No file uploaded",
+        });
       }
-      res.json({
-        success: true,
-        message: "Profile picture updated successfully",
-      });
+
+      // Upload the local file to Cloudinary
+      cloudinary.v2.uploader.upload(
+        filePath, // Local file path (../../public/images/filename)
+        { folder: "aspirelink" }, // Upload to Cloudinary folder
+        async (error, result) => {
+          if (error) {
+            console.error("Cloudinary Upload Error:", error);
+            return res.status(500).json({
+              success: false,
+              message: "Failed to upload to Cloudinary",
+            });
+          }
+
+          // Once uploaded, save the Cloudinary URL in MongoDB
+          const UpdateEmployerImage = await Employerlogin.findByIdAndUpdate(
+            req.params.id, // Employer ID from the request params
+            {
+              profilepictures: result.secure_url, // Save Cloudinary URL
+            },
+            { new: true }
+          );
+
+          if (!UpdateEmployerImage) {
+            return res.status(404).json({
+              success: false,
+              message: "Employer not found",
+            });
+          }
+
+          // Delete the locally saved file after successful upload to Cloudinary
+          fs.unlink(filePath, (err) => {
+            if (err) {
+              console.error("Error deleting local file:", err);
+              return res.status(500).json({
+                success: false,
+                message: "Failed to delete local file after Cloudinary upload",
+              });
+            }
+            console.log("Local file deleted successfully");
+          });
+
+          // Send success response
+          res.json({
+            success: true,
+            message: "Profile picture updated and uploaded to Cloudinary",
+            imageUrl: result.secure_url, // Send the Cloudinary URL in the response
+          });
+        }
+      );
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
       res.status(500).json({
         success: false,
         message: "Failed to update profile picture",
@@ -92,19 +136,6 @@ router.put(
     }
   }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // to delete image
 router.delete("/deletedata/:id", async (req, res) => {

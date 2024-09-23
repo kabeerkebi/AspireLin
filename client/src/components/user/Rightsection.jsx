@@ -42,7 +42,7 @@ const Rightsection = ({ ShareData }) => {
                 <div className="image-icon-div mt-4">
                   <Card.Img
                     className="img-fluid rounded-circle border-primary mb-3 "
-                    src={SERVER_DOMAIN + jobdata.datas.Theimages}
+                    src={jobdata.datas.Theimages}
                     alt=""
                   />
                   <Card.Title className="m-2 m-3 text-center card-company">

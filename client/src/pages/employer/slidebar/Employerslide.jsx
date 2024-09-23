@@ -158,7 +158,7 @@ const Employerslide = () => {
               />
             ) : (
               <img
-                src={`http://localhost:5555/${backendimage}`}
+                src={backendimage}
                 alt=""
                 onClick={Toaddimage}
                 className="img-fluid-slidebar"

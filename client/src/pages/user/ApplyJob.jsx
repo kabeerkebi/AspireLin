@@ -13,8 +13,6 @@ import { createTokenHeader } from "../../utils/createHeader";
 import { updateresumelogin } from "../../redux/action.js";
 import { useDispatch, useSelector } from "react-redux";
 import Similar from "../../components/user/Similar.jsx";
-import { SERVER_DOMAIN } from "../../config/config.js";
-import axios from "axios";
 const ApplyJob = () => {
   const [rendervalue, setrendervalue] = useState(false);
   const dispatch = useDispatch();
@@ -114,7 +112,7 @@ const ApplyJob = () => {
         <div className="flex-grow-1 apply-left-div p-2">
           <div className="company-header max-w-sm">
             <img
-              src={SERVER_DOMAIN + fecthdata.Theimages}
+              src={fecthdata.Theimages}
               alt="Company Logo"
               className="company-logo"
               width={50}
